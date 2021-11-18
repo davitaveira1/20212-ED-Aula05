@@ -13,28 +13,44 @@ public class PrincipalAulaExercicio {
     
     public static void main(String[] args) {
         
-        No primeiro;
-        No ultimo;
+        No no1 = new No(10);
+        No no2 = new No(20);
+        No no3 = new No(30);
         
-        primeiro = null;
-        ultimo = null;
+        No primeiroNo = null;
+        No ultimoNo = null;
         
-        No n1 = new No(10);
-        No n2 = new No(20);
+        primeiroNo = no1;
+        ultimoNo = no3;
         
-        n1.prox = n2;
+        //encadear a lista
+        no1.prox = no2;
+        no2.prox = no3;
         
-        primeiro = n1;
-        ultimo = n2;
+
         
+        //inserir no fim da lista
+        No no4 = new No(40);
+        
+        ultimoNo.prox = no4;
+        ultimoNo = no4;
+        
+    
+        
+        //inserindo no início da lista
+        No no5 = new No(50);
+        
+        no5.prox = primeiroNo;
+        primeiroNo = no5;
+        
+        //imprimindo os valores dos nós
         No aux;
-        aux=primeiro;
-        for(int i=0;i<2;i++){       
-            
-            System.out.println("Posição: "+i+" Valor: "+aux.valor);
+        aux = primeiroNo;
+        
+        while(aux != null){
+            System.out.println("Valor: "+aux.valor);
             aux = aux.prox;
-            
-        }
+        }        
         
         
         
