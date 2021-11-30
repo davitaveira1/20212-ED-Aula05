@@ -32,6 +32,48 @@ public class ListaSimples {
         
     }
     
+    public void inserirNoInicio(No novoNo){
+        
+        //verifica se lista está vazia
+        if(primeiro==null){
+            primeiro = novoNo;
+            ultimo = novoNo;
+        }else{
+            
+            novoNo.prox = primeiro;
+            primeiro = novoNo;
+            
+        }
+        
+    }
+    
+    public int contarNos(){
+        
+        No aux=primeiro;
+        int cont=0;
+        
+        while(aux != null){
+            aux = aux.prox;
+            cont++;
+        }
+        
+        return cont;
+        
+    }
+    
+    public void inserirNaPosicao(int posicao,No novoNo){
+        
+        if(primeiro==null){
+            inserirNoInicio(novoNo);
+        }else{
+            
+            
+            
+        }
+        
+    }
+    
+    
         public void imprimirLista(){
         
         No aux=primeiro;
