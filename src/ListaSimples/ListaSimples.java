@@ -62,10 +62,33 @@ public class ListaSimples {
     }
     
     public void inserirNaPosicao(int posicao,No novoNo){
-        
+        //lista vazia
         if(primeiro==null){
             inserirNoInicio(novoNo);
         }else{
+            
+            if(posicao <= 1){
+                inserirNoInicio(novoNo);
+            }else{
+                //lista possui 1 ou + nós
+                //posicao > 1
+               
+               if(posicao<=contarNos()){
+                   //inserir no meio
+                   
+                   
+                   
+               }else{
+                   //lista possui 1 ou + nós
+                   //posicao > nº de nós
+                   inserirNoFinalDaLista(novoNo);
+               }
+                
+                
+                
+                
+                
+            }
             
             
             
