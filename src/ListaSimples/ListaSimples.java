@@ -75,8 +75,16 @@ public class ListaSimples {
                
                if(posicao<=contarNos()){
                    //inserir no meio
+                   No aux = primeiro;
+                   int prox_pos_aux = 2;
                    
+                   while(posicao != prox_pos_aux){
+                       aux = aux.prox;
+                       prox_pos_aux++;
+                   }
                    
+                   novoNo.prox = aux.prox;
+                   aux.prox=novoNo;                  
                    
                }else{
                    //lista possui 1 ou + nós
@@ -100,7 +108,7 @@ public class ListaSimples {
         public void imprimirLista(){
         
         No aux=primeiro;
-        int cont=0;
+        int cont=1;
         
         while(aux != null){
             
